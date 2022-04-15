@@ -1,0 +1,82 @@
+@import "./../../globals/variables.scss";
+.menu {
+  padding: 0 3rem;
+  font-family: "Oswald";
+  .info {
+    > h3,
+    > span {
+      color: rgba(10, 10, 10, 0.5);
+    }
+  }
+
+  &--social {
+    ul {
+      display: flex;
+      justify-content: center;
+      @media screen and (max-width: 991px) {
+        justify-content: flex-start;
+      }
+      > li {
+        list-style: none;
+        > a {
+          transition: 0.2s all;
+          position: relative;
+          padding-right: 15px;
+
+          color: $menuColorBase;
+          font-weight: 400;
+
+          text-decoration: none;
+          text-transform: uppercase;
+          &:after {
+            content: "/";
+            position: absolute;
+            right: 8px;
+
+            top: 50%;
+            margin-top: -7px;
+          }
+
+          &:hover {
+            color: $menuColorBaseHover;
+          }
+        }
+      }
+    }
+  }
+
+  &--main {
+    @media screen and (min-width: 991px) {
+      margin-top: 4rem;   
+    }
+    ul {
+      @media screen and (max-width: 991px) {
+        display: flex;
+      }
+      > li {
+        list-style: none;
+        padding-bottom: 0.5rem;
+        > a {
+          transition: 0.2s all;
+          display: block;
+          color: rgba(10, 10, 10, 0.5);
+          font-weight: 700;
+
+          font-size: 2.225rem;
+          text-decoration: none;
+          text-transform: uppercase;
+
+          text-align: left;
+
+          &:hover {
+            color: rgba(10, 10, 10, 0.7);
+          }
+
+          @media screen and (max-width: 991px) {
+            font-size: 1rem;
+          }
+        }
+      }
+    }
+  }
+}

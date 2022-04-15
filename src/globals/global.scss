@@ -1,0 +1,84 @@
+@import './variables.scss';
+
+*, h1{
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    font-family: 'lato';
+    background-color: $base-color;
+}
+
+main{
+    width: 100vw;
+    display: grid;
+    grid-template-columns: 2fr 10fr;
+    grid-template-areas: 'sidebar site';
+
+    @media screen and (max-width: 991px) {
+        grid-template-columns: 1fr;
+        grid-template-areas: 
+            'sidebar'
+            'site'
+        ;
+    }
+}
+
+.container{
+
+    margin-bottom: 2rem;
+    padding: 2rem;
+    background-color: #fff;
+
+    &-available{
+        padding: 2rem 0 4.25rem;
+        justify-content: flex-end;
+
+        @media screen and (max-width: 991px) {
+            display: none;
+        }
+    }
+
+    &-site{
+        grid-area: site;
+        padding: 0 5rem;
+        height: 100vh;
+
+        @media screen and (max-width: 991px) {
+            padding: 0 2rem;
+        }
+    }
+}
+
+.sidebar{
+    grid-area: sidebar;
+    padding: 8rem 0 2rem;
+    background-color: #fff;
+
+    @media screen and (max-width: 991px) {
+        padding-top: 3rem;
+        background-color: transparent;
+    }
+}
+
+.bullet{
+
+    display: inline-block;
+    height: 1rem;
+    width: 1rem;
+    border-radius: 50%;
+
+    &.noDisponible{
+        background-color: $baseDanger;
+    }
+}
+
+.text{
+    &-title{
+        color: $textTitle;
+        font-family: 'Oswald';
+        font-weight: 400;
+        text-transform: uppercase;
+    }
+}

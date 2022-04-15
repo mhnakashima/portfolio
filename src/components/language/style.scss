@@ -1,0 +1,11 @@
+.language{
+    &--button{
+        cursor: pointer;
+        background-color: transparent;
+        border: none;
+
+        &:hover{
+            font-weight: bold;
+        }
+    }
+}

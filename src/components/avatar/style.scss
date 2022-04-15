@@ -1,0 +1,15 @@
+@import "./../../globals/animation.scss";
+
+.avatar {
+
+  &--image {
+    overflow: hidden;
+    border-radius: 50%;
+  }
+
+  &:hover {
+    -webkit-animation: spin 0.2s linear 1;
+    -moz-animation: spin 0.2s linear 1;
+    animation: spin 0.2s linear 1;
+  }
+}
