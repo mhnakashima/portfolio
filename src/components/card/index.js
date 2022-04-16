@@ -3,7 +3,7 @@ export const CardComponent = ({information}) => {
     return(
         <>
             <div className='card-avatar'>
-                <img alt='Card description' src='{information.image}' />
+                <img alt='Card description' src={information.image} />
             </div>
             <div className='card-description'>
                 <h2 className='card-description-name'>
