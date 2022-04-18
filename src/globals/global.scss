@@ -5,9 +5,17 @@
     padding: 0;
 }
 
+html{
+    scroll-behavior: smooth;
+}
+
 body{
     font-family: 'lato';
     background-color: $base-color;
+
+    @media screen and (min-width: 991px) {
+        overflow: hidden;
+    }
 }
 
 main{
@@ -28,7 +36,15 @@ main{
 .container{
 
     margin-bottom: 2rem;
-    padding: 2rem;
+    
+    @media screen and (max-width: 991px) {
+        padding: 1rem;
+    }
+
+    @media screen and (min-width: 991px) {
+        padding: 2rem;
+    }
+
     background-color: #fff;
 
     &-available{
@@ -47,6 +63,10 @@ main{
 
         @media screen and (max-width: 991px) {
             padding: 0 2rem;
+        }
+
+        @media screen and (min-width: 991px) {
+            overflow-y: scroll;
         }
     }
 }
@@ -78,7 +98,8 @@ main{
     &-title{
         color: $textTitle;
         font-family: 'Oswald';
-        font-weight: 400;
+        font-size: 3rem;
+        font-weight: bold;
         text-transform: uppercase;
     }
 }
