@@ -1,7 +1,7 @@
 import './style.scss';
 export const CardComponent = ({information}) => {
     return(
-        <>
+        <div className='card'>
             <div className='card-avatar'>
                 <img alt='Card description' src={information.image} />
             </div>
@@ -16,6 +16,6 @@ export const CardComponent = ({information}) => {
                     {information?.text}
                 </div>
             </div>
-        </>
+        </div>
     );
 }

@@ -4,7 +4,7 @@ export function FormationContainer({ formations }) {
     return (
         <div className="formation">
             <h2 className="text-title">Formation</h2>
-            <div className="formation-grid">
+            <div className="formation-grid mt4">
                 {
                     formations.map((formation, index) => {
                         return (

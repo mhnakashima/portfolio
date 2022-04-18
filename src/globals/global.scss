@@ -36,7 +36,15 @@ main{
 .container{
 
     margin-bottom: 2rem;
-    padding: 2rem;
+    
+    @media screen and (max-width: 991px) {
+        padding: 1rem;
+    }
+
+    @media screen and (min-width: 991px) {
+        padding: 2rem;
+    }
+
     background-color: #fff;
 
     &-available{
@@ -90,7 +98,8 @@ main{
     &-title{
         color: $textTitle;
         font-family: 'Oswald';
-        font-weight: 400;
+        font-size: 3rem;
+        font-weight: bold;
         text-transform: uppercase;
     }
 }

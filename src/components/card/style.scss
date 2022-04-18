@@ -1,0 +1,26 @@
+.card {
+
+    display: flex;
+
+    @media screen and (max-width: 991px) {
+        flex-direction: column;
+        margin: 1rem 0;
+    }
+
+    @media screen and (min-width: 991px) {
+        margin: 0 20px 20px;
+        padding: 20px 0;
+    }
+
+    &-avatar {
+        @media screen and (min-width: 991px) {
+            min-width: 150px;
+        }
+    }
+
+    &-description {
+        @media screen and (min-width: 991px) {
+            margin-left: 1rem;
+        }
+    }
+}
