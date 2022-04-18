@@ -5,9 +5,17 @@
     padding: 0;
 }
 
+html{
+    scroll-behavior: smooth;
+}
+
 body{
     font-family: 'lato';
     background-color: $base-color;
+
+    @media screen and (min-width: 991px) {
+        overflow: hidden;
+    }
 }
 
 main{
@@ -47,6 +55,10 @@ main{
 
         @media screen and (max-width: 991px) {
             padding: 0 2rem;
+        }
+
+        @media screen and (min-width: 991px) {
+            overflow-y: scroll;
         }
     }
 }

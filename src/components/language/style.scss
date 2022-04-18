@@ -7,5 +7,9 @@
         &:hover{
             font-weight: bold;
         }
+
+        &.active{
+            font-weight: bold;
+        }
     }
 }
