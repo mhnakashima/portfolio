@@ -9,9 +9,12 @@ export const CardComponent = ({information}) => {
                 <h2 className='card-description-name'>
                     {information?.title}
                 </h2>
-                <p className='card-description-text'>
+                <h3 className='card-description-subtitle'>
+                    {information?.subtitle}
+                </h3>
+                <div className='card-description-text'>
                     {information?.text}
-                </p>
+                </div>
             </div>
         </>
     );

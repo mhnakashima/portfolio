@@ -1,16 +1,19 @@
-import { useEffect } from "react/cjs/react.development";
+import { CardComponent } from "../../components/card";
 
-export function FormationContainer({ formation }) {
-    
-    useEffect(() => {
-        console.log(formation);
-    })
-
+export function FormationContainer({ formations }) {
     return (
         <div className="formation">
             <h2 className="text-title">Formation</h2>
-            <div className="text">
-                
+            <div className="formation-grid">
+                {
+                    formations.map((formation, index) => {
+                        return (
+                            <div key={'formation_' + index} className="formation-grid-item">
+                                <CardComponent information={formation}></CardComponent>
+                            </div>
+                        )
+                    })
+                }
             </div>
         </div>
     )
