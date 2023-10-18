@@ -1,0 +1,13 @@
+.courses{
+    &-grid{
+        display: flex;
+        flex-flow: column wrap;
+        flex-direction: row;
+        gap: 16px;
+
+        &-item{
+            flex-grow: 1;
+        }
+    }
+}
+

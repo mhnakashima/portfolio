@@ -9,29 +9,47 @@ import { FormationContainer } from "../FormationContainer";
 import { MenuContainer } from "../MenuContainer";
 
 export const HomeContainer = () => {
-    const initExperiences = {
-        image: 'https://via.placeholder.com/150',
-        title: 'Front end engineer - take',
-        subtitle: 'may. de 2020 (Currently)',
-        text: 'Front-End developer, creating Inteligent Contacts using AI to help companies to achieve their goals and fill gaps between clients.<br><br>Technologies: HTML, CSS, Sass, Less, NPM, Git, Javascript, Typescript, Angular, AngularJS, Stencil, ReactJS, Vue, Jasmine.'
-    }
+    const initExperiences = [
+        {
+            image: './images/ciandt.jpg',
+            title: 'Software Engineer - CIANDT',
+            subtitle: 'may. de 2020 (Currently)',
+            text: 'Front-End developer, creating Inteligent Contacts using AI to help companies to achieve their goals and fill gaps between clients.<br><br>Technologies: HTML, CSS, Sass, Less, NPM, Git, Javascript, Typescript, Angular, AngularJS, Stencil, ReactJS, Vue, Jasmine.'
+        },
+        {
+            image: './images/take-blip.svg',
+            title: 'Frontend Engineer - BLIP',
+            subtitle: 'may. de 2020 (Currently)',
+            text: 'Front-End developer, creating Inteligent Contacts using AI to help companies to achieve their goals and fill gaps between clients.<br><br>Technologies: HTML, CSS, Sass, Less, NPM, Git, Javascript, Typescript, Angular, AngularJS, Stencil, ReactJS, Vue, Jasmine.'
+        },
+        {
+            image: './images/totvs.jpg',
+            title: 'System Analyst - TOTVS',
+            subtitle: 'may. de 2020 (Currently)',
+            text: 'Front-End developer, creating Inteligent Contacts using AI to help companies to achieve their goals and fill gaps between clients.<br><br>Technologies: HTML, CSS, Sass, Less, NPM, Git, Javascript, Typescript, Angular, AngularJS, Stencil, ReactJS, Vue, Jasmine.'
+        },
+        {
+            image: './images/webaula.jpg',
+            title: 'Front-End Developer - WEBAULA',
+            subtitle: 'may. de 2020 (Currently)',
+            text: 'Front-End developer, creating Inteligent Contacts using AI to help companies to achieve their goals and fill gaps between clients.<br><br>Technologies: HTML, CSS, Sass, Less, NPM, Git, Javascript, Typescript, Angular, AngularJS, Stencil, ReactJS, Vue, Jasmine.'
+        }
+    ]
 
     const initFormation = {
-        image: 'https://via.placeholder.com/150',
+        image: './globals/images/',
         title: 'Experiência 01',
         subtitle: 'Subtítulo 01'
     }
 
     const initCourses = {
-        image: 'https://via.placeholder.com/150',
+        image: './globals/images/',
         title: 'Experiência 01',
         subtitle: 'Subtítulo 01'
     }
 
     const [language, setLanguage] = useState('PT');
-    const [experiences, setExperiences] = useState([
-        initExperiences, initExperiences, initExperiences, initExperiences
-    ]);
+    const [experiences, setExperiences] = useState(initExperiences);
     const [about, setAbout] = useState('');
     const [formations, setFormation] = useState([
         initFormation
@@ -41,8 +59,11 @@ export const HomeContainer = () => {
     ]);
 
     useEffect(() => {
-        setAbout('Olá, sou Michael Nakashima, Front-End Developer, Maranhese no sangue e Mineiro de coração, comecei minha carreira desenvolvendo aplicações no já distante Delphi 6 e naquela época já sabia que não era minha vibe.<br><br>Desenvolvendo aplicacões utilizando Flash / ActionScript para uma empresa pioneira no ramo de Ensino a Distância, foi a porta de entrada para a área de Front End, onde atuei à partir de 2012 convertendo cursos em Flash para HTML / CSS / Javascript, desde então em uma eterna lua de mel com essas tecnologias.<br><br>Trabalhei em uma gigante do ramo de Tecnologia, incialmente como Front End, desenvolvendo aplicativos, sistemas e interfaces para o maior portal de empreendedorismo do Brasil, fui Scrum Master de duas Squads, usando o Scrum para desenvolver soluções e aplicar o ágil, disseminando a cultura e premissas do mesmo.<br><br>Atualmente como Front End, sou responsável por desenvolver uma plataforma intuitiva e poderosa para o desenvolvimento de contatos inteligentes (chatbots), onde grandes empresas de vários ramos automatizam e facilitam a conexão entre marca e usuário.');
-    })
+        setAbout(`I am a career Front End Developer who has participated in projects for online education at a leading company in the field, working with companies such as Sebrae, Oi, Avon, Sky, to develop educational solutions, provide user interfaces, and improve user experience.
+        I have also worked for a technology giant, initially as a Front End Developer, creating applications, systems, and interfaces for Brazil's largest entrepreneurship portal. I have served as a Scrum Master for two squads, utilizing agile methodologies to optimize the development process.
+        Later on, I was responsible for developing and maintaining an intuitive and powerful platform for building intelligent contacts (chatbots), enabling companies to automate and streamline brand-user interactions.
+        Currently, I work in teams where I train new Front End developers, while also developing Mobile and Web applications for industries, including international clients.`);
+    }, [])
 
     function onChooseLanguage(e) {
         if (!e.target.value) {

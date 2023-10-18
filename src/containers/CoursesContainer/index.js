@@ -1,9 +1,10 @@
 import { CardComponent } from "../../components/card"
+import './styles.scss';
 
 export const CoursesContainer = ({ courses }) => {
 
     return (
-        <div className="courses">
+        <div className="courses section">
             <h2 className="text-title">Courses</h2>
             <div className="courses-grid mt4">
                 {
